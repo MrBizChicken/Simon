@@ -4,30 +4,47 @@ using UnityEngine;
 
 public class Blue_changer : MonoBehaviour
 {
+    [SerializeField] private Player player;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Blink()
     {
-        StartCoroutine(col());
-        col();
+        StartCoroutine(ChangeColor());
+
     }
 
 
-    public IEnumerator col()
+    public IEnumerator ChangeColor()
     {
-        gameObject.GetComponent<Renderer>().material.color = new Color(0, 0, 255);
+        Renderer r = gameObject.GetComponent<Renderer>();
+        r.material.color = new Color(255, 0, 0);
         yield return new WaitForSeconds(3);
-        gameObject.GetComponent<Renderer>().material.color = new Color(41, 131, 212);
+        r.material.color = new Color(192, 43, 43);
         yield return new WaitForSeconds(3);
+        
+
+
+
+    }
+
+
+    void OnMouseDown()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            player.Red_input();
+            print("calll");
+
+        }
     }
 }
