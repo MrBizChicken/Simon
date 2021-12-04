@@ -24,44 +24,44 @@ public class GameManager : MonoBehaviour
 
     }
 
-   
-
-    //void Blinker(int item)
-    //{
-    //    if (item == 0)
-    //    {
-    //        //red.GetComponent<Red_changer>().Blink();
-            
-
-    //    }
 
 
-    //    if (item == 1)
-    //    {
-    //        blue.GetComponent<Blue_changer>().Blink();
-            
-    //    }
+    void Blinker(int item)
+    {
+        if (item == 0)
+        {
+            red.GetComponent<ColorChanger>().Blink();
 
 
-    //    if (item == 2)
-    //    {
-    //        green.GetComponent<Green_changer>().Blink();
-            
-    //    }
+        }
 
 
-    //    if (item == 3)
-    //    {
-    //        yellow.GetComponent<Yellow_changer>().Blink();
-            
+        if (item == 1)
+        {
+            blue.GetComponent<ColorChanger>().Blink();
 
-    //    }
+        }
 
-  
+
+        if (item == 2)
+        {
+            green.GetComponent<ColorChanger>().Blink();
+
+        }
+
+
+        if (item == 3)
+        {
+            yellow.GetComponent<ColorChanger>().Blink();
+
+
+        }
 
 
 
-    //}
+
+
+    }
 
 
     void PlayerTurn()
@@ -103,9 +103,8 @@ public class GameManager : MonoBehaviour
 
         foreach(var item in Simon)
         {
-             //Blinker(item);
+            Blinker(item);
         }
-        //Blinker(rand_num);
         PlayerTurn();
         
      }
