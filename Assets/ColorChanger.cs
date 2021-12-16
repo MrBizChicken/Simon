@@ -33,15 +33,7 @@ public class ColorChanger : MonoBehaviour
     }
 
 
-    //void OnMouseDown()
-    //{
-    //    if (Input.GetMouseButton(0))
-    //    {
-    //        player.Red_input();
-    //        print("calll");
 
-    //    }
-    //}
     
 
 }

@@ -12,47 +12,47 @@ public class GameManager : MonoBehaviour
     List<int> Simon = new List<int>();
     [SerializeField] private Player _player;
 
-    public GameObject red, blue, green, yellow;
+    public GameObject Red, Blue, Green, Yellow;
     
     // Start is called before the first frame update
     void Start()
     {
 
 
-        SimonsTurn();
+       SimonsTurn();
 
 
     }
 
 
 
-    void Blinker(int item)
+    void Blinker(int rand_num)
     {
-        if (item == 0)
+        if (rand_num == 0)
         {
-            red.GetComponent<ColorChanger>().Blink();
+            Red.GetComponent<ColorChanger>().Blink();
 
 
         }
 
 
-        if (item == 1)
+        if (rand_num == 1)
         {
-            blue.GetComponent<ColorChanger>().Blink();
+            Blue.GetComponent<ColorChanger>().Blink();
 
         }
 
 
-        if (item == 2)
+        if (rand_num == 2)
         {
-            green.GetComponent<ColorChanger>().Blink();
+            Green.GetComponent<ColorChanger>().Blink();
 
         }
 
 
-        if (item == 3)
+        if (rand_num == 3)
         {
-            yellow.GetComponent<ColorChanger>().Blink();
+            Yellow.GetComponent<ColorChanger>().Blink();
 
 
         }
@@ -66,18 +66,20 @@ public class GameManager : MonoBehaviour
 
     void PlayerTurn()
     {
-        for (int i = 0; i < Simon.Count;  i++)
+        for (int i = 0; i < Simon.Count; i++)
         {
             if (IndexMatches(i))
             {
-                
-                if (LengthMatches())
+
+                if (LengthMatches(i))
                 {
+
+                    print("boom");
                     SimonsTurn();
-                    print("hi");
 
                 }
-                
+                print("omg");
+
             }
 
             else
@@ -85,35 +87,34 @@ public class GameManager : MonoBehaviour
                 Application.Quit();
             }
 
-        
+
 
         }
         
+
     }
 
 
-
+    [ContextMenu("Simons Turn")]
     private void SimonsTurn()
     {
         int rand_num = Random.Range(0, 3);
         Simon.Add(rand_num);
 
 
-
-
-        foreach(var item in Simon)
-        {
-            Blinker(item);
-        }
+        Blinker(rand_num);
         PlayerTurn();
+        print(_player.Input);
+        
         
      }
 
 
 
-    bool LengthMatches()
+    bool LengthMatches(int index)
     {
         return Simon.Count == _player.GetComponent<Player>().Input.Count;
+        print("hi");
     }
 
 
@@ -121,8 +122,9 @@ public class GameManager : MonoBehaviour
     bool IndexMatches(int index)
     {
         int playerCount = _player.GetComponent<Player>().Input.Count;
-        
-        
+        print("lol");
+
+
 
         if (index <= playerCount && playerCount > 0)
         {
@@ -132,6 +134,12 @@ public class GameManager : MonoBehaviour
         return false;
         
     }
+
+
+
+
+
+
 
 
 

@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
         Input.Add(0);
 
 
+
     }
 
 
@@ -34,7 +35,8 @@ public class Player : MonoBehaviour
     public void Blue_input()
     {
         Input.Add(1);
-        
+
+
     }
 
 
@@ -43,7 +45,8 @@ public class Player : MonoBehaviour
     public void Green_input()
     {
         Input.Add(2);
-        
+
+
     }
 
 
@@ -51,6 +54,7 @@ public class Player : MonoBehaviour
     public void Yellow_input()
     {
         Input.Add(3);
+
 
     }
 
