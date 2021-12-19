@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour
 
 
 
-    void Blinker(int rand_num)
+    void Blinker(int item)
     {
-        if (rand_num == 0)
+        if (item == 0)
         {
             Red.GetComponent<ColorChanger>().Blink();
 
@@ -36,21 +36,21 @@ public class GameManager : MonoBehaviour
         }
 
 
-        if (rand_num == 1)
+        if (item == 1)
         {
             Blue.GetComponent<ColorChanger>().Blink();
 
         }
 
 
-        if (rand_num == 2)
+        if (item == 2)
         {
             Green.GetComponent<ColorChanger>().Blink();
 
         }
 
 
-        if (rand_num == 3)
+        if (item == 3)
         {
             Yellow.GetComponent<ColorChanger>().Blink();
 
@@ -63,12 +63,33 @@ public class GameManager : MonoBehaviour
 
     }
 
-    [ContextMenu("Player Turn")]
+    [ContextMenu("Players list")]
+    void printList()
+    {
+        for (int i = 0; i < _player.Input.Count; i++)
+        {
+            print(_player.Input[i]);
+        }
+    }
+
+
+    [ContextMenu("Simons list")]
+    void printList2()
+    {
+        for (int i = 0; i < Simon.Count; i++)
+        {
+            print(Simon[i]);
+        }
+    }
+    [ContextMenu("player turn")]
     void PlayerTurn()
     {
         for (int i = 0; i < Simon.Count; i++)
         {
-            if (CheckList()){
+        
+
+            if (Simon.Count != _player.Input.Count && Simon[i] != _player.Input[i])
+            {
                 print("Working");
                 _player.Input.Clear();
                 SimonsTurn();
@@ -94,27 +115,21 @@ public class GameManager : MonoBehaviour
     private void SimonsTurn()
     {
         int rand_num = Random.Range(0, 3);
+        foreach (int item  in Simon)
+        {
+            Blinker(item);
+        }
         Simon.Add(rand_num);
 
 
-        Blinker(rand_num);
+        
         PlayerTurn();
         
         
      }
 
 
-    bool CheckList()
-    {
-        if (Simon.Count != _player.Input.Count)
-            return true;
-        for (int i = 0; i < Simon.Count; i++)
-        {
-            if (Simon[i] != _player.Input[i])
-                return true;
-        }
-        return false;
-    }
+
 
 
 
