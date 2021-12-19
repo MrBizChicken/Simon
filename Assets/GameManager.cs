@@ -63,23 +63,16 @@ public class GameManager : MonoBehaviour
 
     }
 
-
+    [ContextMenu("Player Turn")]
     void PlayerTurn()
     {
         for (int i = 0; i < Simon.Count; i++)
         {
-            if (IndexMatches(i))
-            {
-
-                if (LengthMatches(i))
-                {
-
-                    print("boom");
-                    SimonsTurn();
-
-                }
-                print("omg");
-
+            if (CheckList()){
+                print("Working");
+                _player.Input.Clear();
+                SimonsTurn();
+                
             }
 
             else
@@ -87,7 +80,9 @@ public class GameManager : MonoBehaviour
                 Application.Quit();
             }
 
+            
 
+            
 
         }
         
@@ -104,36 +99,27 @@ public class GameManager : MonoBehaviour
 
         Blinker(rand_num);
         PlayerTurn();
-        print(_player.Input);
         
         
      }
 
 
-
-    bool LengthMatches(int index)
+    bool CheckList()
     {
-        return Simon.Count == _player.GetComponent<Player>().Input.Count;
-        print("hi");
-    }
-
-
-    
-    bool IndexMatches(int index)
-    {
-        int playerCount = _player.GetComponent<Player>().Input.Count;
-        print("lol");
-
-
-
-        if (index <= playerCount && playerCount > 0)
+        if (Simon.Count != _player.Input.Count)
+            return true;
+        for (int i = 0; i < Simon.Count; i++)
         {
-            return Simon[index] == _player.GetComponent<Player>().Input[index];
-
+            if (Simon[i] != _player.Input[i])
+                return true;
         }
         return false;
-        
     }
+
+
+
+
+
 
 
 

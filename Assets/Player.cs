@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
 
@@ -24,6 +23,8 @@ public class Player : MonoBehaviour
    public void Red_input()
     {
         Input.Add(0);
+
+
 
 
 
@@ -37,6 +38,8 @@ public class Player : MonoBehaviour
         Input.Add(1);
 
 
+
+
     }
 
 
@@ -45,6 +48,8 @@ public class Player : MonoBehaviour
     public void Green_input()
     {
         Input.Add(2);
+
+
 
 
     }
