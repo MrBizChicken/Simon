@@ -7,9 +7,9 @@ public class ColorChanger : MonoBehaviour
     //[SerializeField]  Player player;
 
     [SerializeField]
-    int delay = 1;
 
-    [SerializeField]
+
+    //[SerializeField]
     GameObject highLight;
 
 
@@ -17,19 +17,8 @@ public class ColorChanger : MonoBehaviour
     [ContextMenu("Blink")]
     public void Blink()
     {
-        StartCoroutine(ChangeColor());
+       
         
-    }
-
-
-    public IEnumerator ChangeColor()
-    {
-
-        //higlight on and off
-        highLight.SetActive(true);
-        yield return new WaitForSeconds(delay);
-        highLight.SetActive(false);
-        yield return new WaitForSeconds(delay);
     }
 
 

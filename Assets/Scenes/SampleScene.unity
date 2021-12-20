@@ -133,9 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5353780}
   - component: {fileID: 5353779}
-  - component: {fileID: 5353782}
   - component: {fileID: 5353781}
   - component: {fileID: 5353783}
+  - component: {fileID: 5353782}
   m_Layer: 0
   m_Name: Red
   m_TagString: Untagged
@@ -184,7 +184,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7830189, g: 0.21052866, b: 0.21052866, a: 1}
+  m_Color: {r: 0.4056604, g: 0.15881987, b: 0.15881987, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -218,10 +218,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5353778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7d4417ad806e4d88bbebd934c284378, type: 3}
+  m_Script: {fileID: 11500000, guid: 999f67d7781a642b4b933910ba3f1bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1662386573}
 --- !u!114 &5353782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,11 +230,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5353778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e4291e812ce42e6a16b94aae08b4c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 999f67d7781a642b4b933910ba3f1bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
-  highLight: {fileID: 114728789}
 --- !u!61 &5353783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -320,7 +317,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.7830189, g: 0.21052866, b: 0.21052866, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -436,9 +433,8 @@ GameObject:
   m_Component:
   - component: {fileID: 508306366}
   - component: {fileID: 508306365}
-  - component: {fileID: 508306368}
-  - component: {fileID: 508306367}
   - component: {fileID: 508306369}
+  - component: {fileID: 508306367}
   m_Layer: 0
   m_Name: Blue
   m_TagString: Untagged
@@ -487,7 +483,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.2117647, g: 0.37741432, b: 0.78431374, a: 1}
+  m_Color: {r: 0.14012992, g: 0.2279921, b: 0.4433962, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -521,24 +517,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 508306364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38baab2aa585c47a695f38224f921e34, type: 3}
+  m_Script: {fileID: 11500000, guid: 999f67d7781a642b4b933910ba3f1bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1662386573}
---- !u!114 &508306368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508306364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e4291e812ce42e6a16b94aae08b4c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 3
-  highLight: {fileID: 1390474251}
 --- !u!61 &508306369
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -575,9 +556,8 @@ GameObject:
   m_Component:
   - component: {fileID: 517848046}
   - component: {fileID: 517848045}
-  - component: {fileID: 517848048}
-  - component: {fileID: 517848047}
   - component: {fileID: 517848049}
+  - component: {fileID: 517848047}
   m_Layer: 0
   m_Name: Green
   m_TagString: Untagged
@@ -626,7 +606,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.27779275, g: 0.78431374, b: 0.2117647, a: 1}
+  m_Color: {r: 0.1491814, g: 0.41509432, b: 0.115521535, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -660,24 +640,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 517848044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76002c85c5f241fcb86fe8af9b690e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 999f67d7781a642b4b933910ba3f1bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1662386573}
---- !u!114 &517848048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517848044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e4291e812ce42e6a16b94aae08b4c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 3
-  highLight: {fileID: 1244900648}
 --- !u!61 &517848049
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -817,10 +782,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1662386573}
-  Red: {fileID: 5353778}
-  Blue: {fileID: 508306364}
-  Green: {fileID: 517848044}
-  Yellow: {fileID: 1321037642}
+  highlights:
+  - {fileID: 114728789}
+  - {fileID: 1390474251}
+  - {fileID: 1244900648}
+  - {fileID: 249080864}
+  delayTime: 0.3
 --- !u!4 &636861123
 Transform:
   m_ObjectHideFlags: 0
@@ -927,9 +894,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1321037644}
   - component: {fileID: 1321037643}
-  - component: {fileID: 1321037646}
-  - component: {fileID: 1321037645}
   - component: {fileID: 1321037647}
+  - component: {fileID: 1321037645}
   m_Layer: 0
   m_Name: Yellow
   m_TagString: Untagged
@@ -978,7 +944,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.78431374, g: 0.75128245, b: 0.2117647, a: 1}
+  m_Color: {r: 0.46226418, g: 0.44413295, b: 0.128649, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1012,24 +978,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1321037642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca681dead79d24dc0b4a237734daf5cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 999f67d7781a642b4b933910ba3f1bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1662386573}
---- !u!114 &1321037646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321037642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e4291e812ce42e6a16b94aae08b4c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 3
-  highLight: {fileID: 249080864}
 --- !u!61 &1321037647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1168,6 +1119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Input: 
+  g: {fileID: 636861122}
 --- !u!4 &1662386574
 Transform:
   m_ObjectHideFlags: 0
