@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
     }
 
     [ContextMenu("Players list")]
-    void printList()
+    void printList1()
     {
         for (int i = 0; i < _player.Input.Count; i++)
         {
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         {
         
 
-            if (Simon.Count != _player.Input.Count && Simon[i] != _player.Input[i])
+            if (Simon.Count == _player.Input.Count && Simon[i] == _player.Input[i])
             {
                 print("Working");
                 _player.Input.Clear();
@@ -111,7 +111,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    [ContextMenu("Simons Turn")]
+    [ContextMenu("Play")]
     private void SimonsTurn()
     {
         int rand_num = Random.Range(0, 3);
