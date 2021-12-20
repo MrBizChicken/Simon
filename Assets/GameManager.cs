@@ -9,9 +9,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    List<int> simonsButtons = new List<int>();
-    
-    [SerializeField] private Player _player;
+    public List<int> simonsButtons = new List<int>();
+    public List<int> playerSlections = new List<int>();
+
+
 
     [SerializeField]
     GameObject[] highlights;
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
 
 
 
-    private IEnumerator SimonsTurn()
+    public IEnumerator SimonsTurn()
     {
         int rand_num = Random.Range(0, 3);
         
